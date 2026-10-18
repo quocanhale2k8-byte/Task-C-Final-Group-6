@@ -36,26 +36,6 @@ Chưa triển khai các chức năng tuần 2: tìm kiếm từ menu, sửa, xó
 
 Giới hạn chuỗi tính bằng byte; tiếng Việt UTF-8 có thể dùng nhiều byte cho một ký tự. Bảng dùng `strlen` để tính độ rộng nên căn cột tốt nhất với dữ liệu không dấu. Với tên dài, mở rộng cửa sổ Terminal để tránh tự xuống dòng.
 
-## Biên dịch và chạy
-
-Cần trình biên dịch C hỗ trợ C11, ví dụ GCC. Trong Terminal, chuyển vào thư mục chứa `main.c`.
-
-### Windows — PowerShell
-
-```powershell
-gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o nhiemvu.exe
-.\nhiemvu.exe
-```
-
-### Linux / macOS có GCC
-
-```bash
-gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o nhiemvu
-./nhiemvu
-```
-
-Chỉ biên dịch `main.c`. File `phan-quoc-an.c.txt` là đoạn code để đối chiếu/ghép, không phải file cần biên dịch thêm.
-
 ## Các hàm chính
 
 | Hàm | Vai trò |
