@@ -1,52 +1,71 @@
-# Quản lý nhiệm vụ nhóm học lập trình — Tuần 1
+# Quản lý nhiệm vụ nhóm học lập trình
 
-Ứng dụng Console bằng C, lưu tối đa 100 nhiệm vụ trong mảng struct tĩnh. Dữ liệu chỉ tồn tại trong RAM và mất khi thoát chương trình.
+Ứng dụng Console viết bằng C, dùng struct và mảng tĩnh để quản lý tối đa 100 nhiệm vụ. Dữ liệu lưu trong RAM và mất khi thoát chương trình.
 
 ## Thành viên và phân công
 
 | Thành viên | Phần phụ trách |
 |---|---|
-| Hà Lê Quốc An | Menu, đọc lựa chọn menu, hiển thị bảng và trạng thái bằng chữ; thiết lập repo, `.gitignore`, bổ sung README; phối hợp ghép code. |
-| Tín  | Thêm nhiệm vụ; các hàm nhập và kiểm tra dữ liệu; tìm mã để chống trùng; hoàn thiện xử lý dòng dài và lỗi đọc khi thêm. |
-| Cả hai | Kiểm tra chéo, tự commit phần mình, hiểu code và báo cáo tiến độ cho Mentor. |
-
-Bảng trên là phân công, không thay thế lịch sử đóng góp thực tế. Bản bổ sung menu/hiển thị có hỗ trợ soạn và kiểm tra bằng AI; thành viên cần đọc hiểu và tự kiểm tra trước khi commit.
+| Hà Lê Quốc An | Menu, hiển thị danh sách, thiết lập repo và tài liệu, phối hợp ghép code. |
+| Tín | Thêm nhiệm vụ, kiểm tra dữ liệu đầu vào, tìm mã để tránh trùng. |
+| Cả hai | Kiểm tra, sửa lỗi và báo cáo tiến độ. |
 
 ## Chức năng tuần 1
 
-- Menu bằng `do-while` và `switch-case`: thêm, hiển thị, thoát.
-- Thêm nhiệm vụ, chặn mã trùng, thông tin rỗng, mã có khoảng trắng và các giá trị số sai phạm vi thông thường.
-- Bảng có STT, mã, tên, người phụ trách, trạng thái và điểm.
-- Trạng thái hiển thị bằng chữ; phân biệt chưa chấm với được 0 điểm.
-- Cột tự mở rộng theo chuỗi dài, không cắt dữ liệu. Điểm hiển thị một chữ số thập phân.
-- Menu từ chối chữ, dòng rỗng, chuỗi như `0abc`, số ngoài 0–2 và dòng quá dài. Kết thúc đầu vào tại menu sẽ thoát.
+- Thêm nhiệm vụ: mã, tên, người phụ trách, trạng thái và điểm.
+- Hiển thị danh sách dạng bảng, trạng thái bằng chữ.
+- Phân biệt chưa chấm điểm và được 0 điểm.
+- Kiểm tra thông tin rỗng, mã trùng, khoảng trắng trong mã, chuỗi quá dài, số không hợp lệ và mảng đầy.
+- Hủy thao tác thêm nếu đầu vào kết thúc hoặc đọc lỗi trước khi đủ thông tin.
+- Menu lặp bằng `do-while` và `switch-case`, chọn 0 để thoát.
 
-Chưa triển khai các chức năng tuần 2: tìm kiếm từ menu, sửa, xóa, thống kê tiến độ, lọc/sắp xếp. `timTheoMa` hiện chỉ là hàm hỗ trợ kiểm tra mã trùng.
+Các chức năng tìm kiếm từ menu, cập nhật, xóa, thống kê tiến độ và lọc/sắp xếp sẽ triển khai ở tuần 2.
 
-## Quy ước dữ liệu
+## Dữ liệu
 
 | Trường | Kiểu | Quy ước |
 |---|---|---|
-| `ma` | `char[20]` | Tối đa 19 byte nội dung, không rỗng, không khoảng trắng, không trùng. Ví dụ NV001. |
-| `ten` | `char[100]` | Tối đa 99 byte nội dung, không rỗng, cho phép dấu cách. |
-| `nguoiPhuTrach` | `char[100]` | Tối đa 99 byte nội dung, không rỗng, cho phép dấu cách. |
+| `ma` | `char[20]` | Tối đa 19 byte, không rỗng, không khoảng trắng, không trùng. |
+| `ten` | `char[100]` | Tối đa 99 byte, không rỗng, cho phép dấu cách. |
+| `nguoiPhuTrach` | `char[100]` | Tối đa 99 byte, không rỗng, cho phép dấu cách. |
 | `trangThai` | `int` | 0: chưa làm; 1: đang làm; 2: hoàn thành. |
 | `daChamDiem` | `int` | 0: chưa chấm; 1: đã chấm. |
-| `diem` | `float` | 0–10 khi đã chấm; nếu chưa chấm thì lưu 0 nhưng in “Chua cham”. |
+| `diem` | `float` | 0–10; chỉ hiển thị điểm khi đã chấm. |
 
-Giới hạn chuỗi tính bằng byte; tiếng Việt UTF-8 có thể dùng nhiều byte cho một ký tự. Bảng dùng `strlen` để tính độ rộng nên căn cột tốt nhất với dữ liệu không dấu. Với tên dài, mở rộng cửa sổ Terminal để tránh tự xuống dòng.
+Bảng tự nới cột theo độ dài chuỗi. Dữ liệu không dấu căn cột chính xác hơn vì `strlen` đếm byte, không đếm độ rộng ký tự trên màn hình. Với tên dài, cần mở rộng Terminal. Điểm hiển thị một chữ số thập phân; dùng dấu chấm khi nhập điểm thập phân.
 
-## Các hàm chính
+## Biên dịch và chạy
 
-| Hàm | Vai trò |
-|---|---|
-| `hienThiMenu` | In menu và lời nhắc. |
-| `nhapLuaChon` | Đọc một dòng; trả 0–2 nếu hợp lệ, -1 nếu sai; trả 0 khi đầu vào kết thúc. |
-| `tenTrangThai` | Đổi số trạng thái thành chuỗi. |
-| `inDuongKe` | In đường viền bảng theo chiều rộng các cột. |
-| `hienThiDanhSach` | Tính chiều rộng, in bảng, điểm và số nhiệm vụ. |
-| `themNhiemVu` | Nhập, kiểm tra và lưu một nhiệm vụ. |
-| `timTheoMa` | Trả vị trí tìm thấy hoặc -1, dùng chống mã trùng. |
-| `main` | Tạo mảng, biến đếm và điều khiển menu. |
+Cần GCC hoặc trình biên dịch hỗ trợ C11. Mở Terminal tại thư mục chứa `main.c`.
 
-Thư viện: `<stdio.h>` cho `printf`, `fgets`, `sscanf`, `snprintf`, `getchar`; `<string.h>` cho `strlen`, `strcmp`, `strcspn`, `strchr`, `strcpy`.
+### Windows — PowerShell
+
+```powershell
+gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o nhiemvu.exe
+.\nhiemvu.exe
+```
+
+### Linux / macOS có GCC
+
+```bash
+gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o nhiemvu
+./nhiemvu
+```
+
+## Cách dùng
+
+1. Chọn 1 để thêm nhiệm vụ và nhập thông tin theo lời nhắc.
+2. Chọn 2 để xem danh sách.
+3. Chọn 0 để thoát.
+
+Thông tin sai sẽ được yêu cầu nhập lại. Nếu kết thúc đầu vào khi đang thêm, nhiệm vụ chưa hoàn chỉnh sẽ không được lưu.
+
+## Kiểm thử
+
+Đã chạy 11 nhóm kiểm tra gồm dữ liệu hợp lệ, menu nhập sai, mã trùng, thông tin rỗng, giới hạn chuỗi, dòng quá dài, số vượt phạm vi, điểm không hữu hạn, kết thúc đầu vào và mảng đầy. Kết quả chi tiết trong `docs/kiem-thu.txt`.
+
+## Demo
+
+![Đầu ra chạy thử](docs/demo-output.png)
+
+Ảnh minh họa được dựng từ đầu ra thực tế trong `docs/demo-output.txt`. Nhóm bổ sung ảnh chụp Terminal trên máy cá nhân trước khi nộp theo yêu cầu Screenshot.
