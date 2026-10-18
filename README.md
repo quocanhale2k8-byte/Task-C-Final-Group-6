@@ -66,6 +66,6 @@ Thông tin sai sẽ được yêu cầu nhập lại. Nếu kết thúc đầu v
 
 ## Demo
 
-![Đầu ra chạy thử](docs/demo-output.png)
+![Đầu ra chạy thử](demo-output.png)
 
 Ảnh minh họa được dựng từ đầu ra thực tế trong `docs/demo-output.txt`. Nhóm bổ sung ảnh chụp Terminal trên máy cá nhân trước khi nộp theo yêu cầu Screenshot.
