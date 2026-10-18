@@ -7,7 +7,7 @@
 | Thành viên | Phần phụ trách |
 |---|---|
 | Hà Lê Quốc An | Menu, đọc lựa chọn menu, hiển thị bảng và trạng thái bằng chữ; thiết lập repo, `.gitignore`, bổ sung README; phối hợp ghép code. |
-| Tín (Kuro trong chú thích code gốc) | Thêm nhiệm vụ; các hàm nhập và kiểm tra dữ liệu; tìm mã để chống trùng; hoàn thiện xử lý dòng dài và lỗi đọc khi thêm. |
+| Tín  | Thêm nhiệm vụ; các hàm nhập và kiểm tra dữ liệu; tìm mã để chống trùng; hoàn thiện xử lý dòng dài và lỗi đọc khi thêm. |
 | Cả hai | Kiểm tra chéo, tự commit phần mình, hiểu code và báo cáo tiến độ cho Mentor. |
 
 Bảng trên là phân công, không thay thế lịch sử đóng góp thực tế. Bản bổ sung menu/hiển thị có hỗ trợ soạn và kiểm tra bằng AI; thành viên cần đọc hiểu và tự kiểm tra trước khi commit.
