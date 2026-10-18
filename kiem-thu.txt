@@ -1,0 +1,12 @@
+KET QUA KIEM THU
+GCC C11 + AddressSanitizer + UndefinedBehaviorSanitizer
+LeakSanitizer tat vi moi truong khong ho tro.
+
+PASS: Menu: chu, rong, 0abc, so ngoai pham vi, dong 500 ky tu
+PASS: EOF tai menu
+PASS: Them va hien thi ca 3 trang thai; diem 0 va chua cham
+PASS: Ten dai 80 ky tu va nguoi phu trach 60 ky tu
+PASS: Kiem tra ghep: ma trung va du lieu sai thong thuong
+PASS: Kiem tra ghep: 100 nhiem vu va chan mang day
+
+Phan nhap cua Tin con loi da biet: chuoi qua dai va EOF trong luc them. Khong ket luan toan bo chuong trinh da hoan thien.
