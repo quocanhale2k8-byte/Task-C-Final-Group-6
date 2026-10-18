@@ -50,24 +50,3 @@ Giới hạn chuỗi tính bằng byte; tiếng Việt UTF-8 có thể dùng nhi
 | `main` | Tạo mảng, biến đếm và điều khiển menu. |
 
 Thư viện: `<stdio.h>` cho `printf`, `fgets`, `sscanf`, `snprintf`, `getchar`; `<string.h>` cho `strlen`, `strcmp`, `strcspn`, `strchr`, `strcpy`.
-
-## Kiểm tra đã thực hiện
-
-Đã chạy 6 nhóm kiểm tra trên bản ghép: menu nhập sai và dòng dài; kết thúc đầu vào tại menu; ba trạng thái và điểm 0/chưa chấm; tên dài; kiểm tra dữ liệu thông thường khi thêm; đủ 100 nhiệm vụ và chặn mảng đầy. Chi tiết tại `docs/kiem-thu.txt`.
-
-Các kiểm tra trên không có báo lỗi AddressSanitizer/UndefinedBehaviorSanitizer. LeakSanitizer bị tắt do môi trường chạy không hỗ trợ. Không xem đây là xác nhận mọi trường hợp đều đúng.
-
-## Việc còn cần phối hợp với Tín
-
-- Xử lý dòng quá dài trong phần nhập của Tín: hiện `fgets` có thể để lại phần dư, làm trôi dữ liệu sang trường tiếp theo; các hàm nhập số cũng cần xử lý dòng dài.
-- Kiểm tra kết quả `fgets` ở mã, tên, người phụ trách; khi EOF/lỗi đọc giữa thao tác thêm phải hủy thêm, không lưu bản ghi dở dang. Các hàm nhập số hiện trả giá trị nhỏ nhất khi EOF, cần phân biệt lỗi đọc với giá trị nhập hợp lệ.
-- Cách đọc số nguyên bằng `sscanf("%d ...")` trong phần nhập cần kiểm tra thêm trường hợp số vượt giới hạn kiểu `int`; chưa được xác nhận an toàn với đầu vào cực lớn.
-- Chạy lại trên máy hai thành viên, chụp ảnh Terminal thật và thêm vào README trước khi nộp. Xác nhận repo Public, lời mời thành viên/Mentor và lịch sử commit.
-
-## Demo từ kết quả chạy thử
-
-Ảnh dưới đây được dựng từ đầu ra thực tế của chương trình, không phải ảnh chụp màn hình máy của thành viên. Đầu ra dạng chữ nằm trong `docs/demo-output.txt`.
-
-![Đầu ra chạy thử](docs/demo-output.png)
-
-Nhóm cần bổ sung ảnh chụp Terminal thật khi nghiệm thu trên máy cá nhân để đáp ứng yêu cầu Screenshot của dự án.
