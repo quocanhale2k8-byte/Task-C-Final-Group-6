@@ -1,9 +1,0 @@
-DANH SACH NHIEM VU
-+------+----------+--------------------------+------------------+--------------+------------+
-| STT  | MA       | TEN NHIEM VU             | NGUOI PHU TRACH  | TRANG THAI   | DIEM       |
-+------+----------+--------------------------+------------------+--------------+------------+
-| 1    | NV001    | Hoc C                    | Quoc An          | Chua lam     | Chua cham  |
-| 2    | NV002    | Viet ham them nhiem vu   | Tin              | Dang lam     | 0.0        |
-| 3    | NV003    | Kiem tra chuong trinh    | Quoc An          | Hoan thanh   | 8.5        |
-+------+----------+--------------------------+------------------+--------------+------------+
-Tong so nhiem vu: 3/100
