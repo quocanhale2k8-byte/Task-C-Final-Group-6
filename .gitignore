@@ -1,8 +1,0 @@
-*.exe
-*.o
-*.obj
-*.out
-*.dSYM/
-nhiemvu
-.vscode/
-.DS_Store
