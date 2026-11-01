@@ -1,0 +1,111 @@
+
+==========================================
+  QUAN LY NHIEM VU NHOM HOC LAP TRINH
+==========================================
+  1. Them nhiem vu
+  2. Hien thi danh sach
+  3. Cap nhat nhiem vu
+  4. Xoa nhiem vu
+  5. Tim kiem theo ma
+  6. Thong ke nhiem vu
+  7. Loc theo trang thai
+  0. Thoat
+------------------------------------------
+Chon chuc nang (0 - 7): Nhap ma (vd NV001): Nhap ten nhiem vu: Nhap nguoi phu trach: Nhap trang thai (0: chua lam, 1: dang lam, 2: hoan thanh): Da cham diem chua? (0: chua, 1: roi): Nhap diem (0 - 10): Da them nhiem vu NV01
+
+==========================================
+  QUAN LY NHIEM VU NHOM HOC LAP TRINH
+==========================================
+  1. Them nhiem vu
+  2. Hien thi danh sach
+  3. Cap nhat nhiem vu
+  4. Xoa nhiem vu
+  5. Tim kiem theo ma
+  6. Thong ke nhiem vu
+  7. Loc theo trang thai
+  0. Thoat
+------------------------------------------
+Chon chuc nang (0 - 7): Nhap ma (vd NV001): Nhap ten nhiem vu: Nhap nguoi phu trach: Nhap trang thai (0: chua lam, 1: dang lam, 2: hoan thanh): Da cham diem chua? (0: chua, 1: roi): Da them nhiem vu NV02
+
+==========================================
+  QUAN LY NHIEM VU NHOM HOC LAP TRINH
+==========================================
+  1. Them nhiem vu
+  2. Hien thi danh sach
+  3. Cap nhat nhiem vu
+  4. Xoa nhiem vu
+  5. Tim kiem theo ma
+  6. Thong ke nhiem vu
+  7. Loc theo trang thai
+  0. Thoat
+------------------------------------------
+Chon chuc nang (0 - 7): 
+DANH SACH NHIEM VU
++------+----------+--------------------------+------------------+--------------+------------+
+| STT  | MA       | TEN NHIEM VU             | NGUOI PHU TRACH  | TRANG THAI   | DIEM       |
++------+----------+--------------------------+------------------+--------------+------------+
+| 1    | NV01     | Chuan bi tai lieu        | An               | Hoan thanh   | 8.0        |
+| 2    | NV02     | Kiem tra chuong trinh    | Tin              | Dang lam     | Chua cham  |
++------+----------+--------------------------+------------------+--------------+------------+
+Tong so nhiem vu: 2/100
+Diem hien thi lam tron 1 chu so thap phan.
+
+==========================================
+  QUAN LY NHIEM VU NHOM HOC LAP TRINH
+==========================================
+  1. Them nhiem vu
+  2. Hien thi danh sach
+  3. Cap nhat nhiem vu
+  4. Xoa nhiem vu
+  5. Tim kiem theo ma
+  6. Thong ke nhiem vu
+  7. Loc theo trang thai
+  0. Thoat
+------------------------------------------
+Chon chuc nang (0 - 7): 
+THONG KE NHIEM VU
+Tong so nhiem vu: 2
+Chua lam: 0
+Dang lam: 1
+Hoan thanh: 1
+Da cham diem: 1
+Chua cham diem: 1
+Diem trung binh cua nhiem vu da cham: 8.00
+
+==========================================
+  QUAN LY NHIEM VU NHOM HOC LAP TRINH
+==========================================
+  1. Them nhiem vu
+  2. Hien thi danh sach
+  3. Cap nhat nhiem vu
+  4. Xoa nhiem vu
+  5. Tim kiem theo ma
+  6. Thong ke nhiem vu
+  7. Loc theo trang thai
+  0. Thoat
+------------------------------------------
+Chon chuc nang (0 - 7): Nhap trang thai can loc (0: chua lam, 1: dang lam, 2: hoan thanh): 
+Ket qua loc: Dang lam
+
+DANH SACH NHIEM VU
++------+----------+--------------------------+------------------+--------------+------------+
+| STT  | MA       | TEN NHIEM VU             | NGUOI PHU TRACH  | TRANG THAI   | DIEM       |
++------+----------+--------------------------+------------------+--------------+------------+
+| 1    | NV02     | Kiem tra chuong trinh    | Tin              | Dang lam     | Chua cham  |
++------+----------+--------------------------+------------------+--------------+------------+
+Tong so nhiem vu: 1/100
+Diem hien thi lam tron 1 chu so thap phan.
+
+==========================================
+  QUAN LY NHIEM VU NHOM HOC LAP TRINH
+==========================================
+  1. Them nhiem vu
+  2. Hien thi danh sach
+  3. Cap nhat nhiem vu
+  4. Xoa nhiem vu
+  5. Tim kiem theo ma
+  6. Thong ke nhiem vu
+  7. Loc theo trang thai
+  0. Thoat
+------------------------------------------
+Chon chuc nang (0 - 7): Tam biet!
