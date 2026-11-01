@@ -1,0 +1,5 @@
+*.exe
+*.o
+nhiemvu
+__pycache__/
+.vscode/
